@@ -1,0 +1,87 @@
+@import url(color.css);
+.container main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container main span:nth-child(1) {
+    color: var(--font-emphasis);
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+.container main .activities {
+    width: 150rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.container main .activities span{
+    font-size: 4rem;
+    font-weight: 700;
+    border: .3rem solid var(--font-emphasis);
+    border-radius:5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    color: var(--font-text);
+}
+
+.container main .activities .box-list{
+    display: flex;
+    width: 100rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container main .activities .box-list .box{
+    border: .2rem solid black;
+    height:30rem;
+    width: 30rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.container main .activities .box-list .box span{
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    width: 25rem;
+    border: none;
+    visibility: hidden;
+}
+
+.container main .activities .box-list:nth-of-type(2) .box:nth-child(1) span {
+    font-size: 1.2rem;
+}
+.container main .activities .box-list:nth-of-type(2) .box:nth-child(2) span {
+    font-size: 1.3rem;
+
+}
+.container main .activities .box-list .box:hover{
+    background: var(--font-emphasis);
+    transition: .25s;
+    visibility: visible;
+}
+
+.container main .activities .box-list .box:hover span{
+    visibility: visible;
+    transition: 2s;
+
+}
+
+
+

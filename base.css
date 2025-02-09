@@ -51,3 +51,7 @@ body {
     margin-left: 5rem;
     font-weight: 800;
 }
+
+.container main {
+    grid-area: main;
+}
