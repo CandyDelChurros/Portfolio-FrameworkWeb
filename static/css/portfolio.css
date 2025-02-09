@@ -45,7 +45,7 @@
 }
 
 .container main .activities .box-list .box{
-    border: .2rem solid black;
+    border: .2rem solid var(--font-emphasis);
     height:30rem;
     width: 30rem;
     border-radius: 2rem;
@@ -69,10 +69,29 @@
 }
 .container main .activities .box-list:nth-of-type(2) .box:nth-child(2) span {
     font-size: 1.3rem;
-
+    
 }
-.container main .activities .box-list .box:hover{
+.container main .activities .box-list:nth-of-type(1) a:nth-child(1) .box{
+    background: url(../img/ball.png);
+    background-size: cover;
+}
+.container main .activities .box-list:nth-of-type(1) a:nth-child(2) .box{
+    background: url(../img/cam.png);
+    background-size: cover;
+}
+.container main .activities .box-list:nth-of-type(1) a:nth-child(3) .box{
+    background: url(../img/table.png);
+    background-size: cover;
+}
+.container main .activities .box-list:nth-of-type(1) .box:nth-child(4){
     background: var(--font-emphasis);
+}
+.container main .activities .box-list:nth-of-type(1) .box:nth-child(4) span{
+    visibility: visible;
+}
+
+.container main .activities .box-list .box:hover{
+    background: var(--font-emphasis) !important;
     transition: .25s;
     visibility: visible;
 }
@@ -80,8 +99,8 @@
 .container main .activities .box-list .box:hover span{
     visibility: visible;
     transition: 2s;
-
 }
+
 
 
 

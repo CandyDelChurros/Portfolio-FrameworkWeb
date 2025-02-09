@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1 - Exercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/l1e1.css') }}">
+</head>
+<body>
+    <h3>Exercicio 1: Crie uma rota para uma página web com a tag canvas que permite ao usuário deslocar uma fotografia para a direita e esquerda com as setinhas do teclado </h3>
+    <h1>Use as setas para mover a imagem</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+    <script>
+        const imageSrc = "{{ url_for('static', filename='img/ball.png') }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/l1e1.js') }}"></script>
+</body>
+</html>

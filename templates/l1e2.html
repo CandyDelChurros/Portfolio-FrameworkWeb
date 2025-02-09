@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/l1e2.css')}}">
+</head>
+<body>
+    <h3>Exercicio 2: Crie uma rota para a atividade 2 que permita ao usuário capturar uma fotografia pela webcam e mostrar na tela</h3>
+    <h1>Sorria para camera!</h1>
+    <video id="webcam" autoplay></video>
+    <button id="captureButton">Capturar Foto</button>
+    <canvas id="capturedImage"></canvas>
+    <a href="{{url_for('portfolio')}}"><button>Voltar!</button></a>
+    <script src="{{ url_for('static', filename='js/l1e2.js') }}"></script>
+</body>
+</html>

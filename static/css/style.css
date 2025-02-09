@@ -21,7 +21,7 @@
 }
 
 .container main .banner .banner-right {
-    background: url(img/dev.webp);
+    background: url(../img/dev.webp);
     height: 40rem;
     width: 55rem;
     background-size: cover;
@@ -30,7 +30,7 @@
 .container main .banner-me .banner-left{
     height: 40rem;
     width: 40rem;
-    background: url(img/eu.jpg);
+    background: url(../img/eu.jpg);
     background-repeat: no-repeat;
     border-radius: 20rem;
     margin-right: 10rem;

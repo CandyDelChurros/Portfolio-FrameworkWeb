@@ -1,0 +1,32 @@
+@import url(color.css);
+body {
+    font-family: 'Poppins';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body h1{
+    color: var(--font-emphasis);
+}
+body canvas {
+    border: 0.1rem solid var(--font-emphasis);
+}
+
+body button{
+    width: 25rem;
+    height: 5rem;
+    background: var(--header-color);
+    border: .2rem solid var(--font-emphasis);
+    margin-top: 5rem;
+    color: var(--font-color);
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+

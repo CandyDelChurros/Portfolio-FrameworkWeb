@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='portfolio.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='base.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='color.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/portfolio.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/color.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -28,21 +34,32 @@
             <div class="activities">
                 <span>Lista de Atividade 1</span>
                 <div class="box-list">
-                    <div class="box">
-                        <span>Atividade 1</span>
-                        <span>Crie uma rota para uma página web com a tag canvas que permite ao usuário deslocar uma fotografia para a direita e esquerda com as setinhas do teclado.</span>
-                    </div>
-                    <div class="box">
-                        <span>Atividade 2</span>
-                        <span>Crie uma rota para a atividade 2 que permita ao usuário capturar uma fotografia pela webcam e mostrar na tela</span>
-                    </div>
-                    <div class="box">
-                        <span>Atividade 3</span>
-                        <span>Crie uma rota para a atividade 3 com python app que exiba uma tabela (sem usar table) com 997 linhas e 5 colunas: nas colunas id, nome, sobrenome, e-mail, ações.</span>
-                    </div>
+                    <a href="{{url_for('l1e1')}}">
+                        <div class="box">
+                            <span>Atividade 1</span>
+                            <span>Crie uma rota para uma página web com a tag canvas que permite ao usuário deslocar uma
+                                fotografia para a direita e esquerda com as setinhas do teclado.</span>
+                        </div>
+                    </a>
+                    <a href="{{url_for('l1e2')}}">
+                        <div class="box">
+                            <span>Atividade 2</span>
+                            <span>Crie uma rota para a atividade 2 que permita ao usuário capturar uma fotografia pela
+                                webcam e mostrar na tela</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="box">
+                            <span>Atividade 3</span>
+                            <span>Crie uma rota para a atividade 3 com python app que exiba uma tabela (sem usar table)
+                                com
+                                997 linhas e 5 colunas: nas colunas id, nome, sobrenome, e-mail, ações.</span>
+                        </div>
+                    </a>
                     <div class="box">
                         <span>Atividade 4</span>
-                        <span>Crie uma rota com 3 links, um para cada uma das atividades anteriores, porém todas elas bonitas</span>
+                        <span>Crie uma rota com 3 links, um para cada uma das atividades anteriores, porém todas elas
+                            bonitas</span>
                     </div>
                 </div>
 
@@ -50,28 +67,40 @@
                 <div class="box-list">
                     <div class="box">
                         <span>Atividade 1</span>
-                        <span>Considerando um usuário e uma senha mocados (dados fictícios) faça uma página de autenticação que retorne uma mensagem caso a autenticação funcione (bom dia, tarde, noite a depender do horário), se não, diz que o login não bateu, limite as tentativas de autenticação do usuário em 2x, se ele errar duas vezes, tire a opção de login e exiba uma mensagem de erro e Estilize de forma bonita a página de identificação;</span>
+                        <span>Considerando um usuário e uma senha mocados (dados fictícios) faça uma página de
+                            autenticação que retorne uma mensagem caso a autenticação funcione (bom dia, tarde, noite a
+                            depender do horário), se não, diz que o login não bateu, limite as tentativas de
+                            autenticação do usuário em 2x, se ele errar duas vezes, tire a opção de login e exiba uma
+                            mensagem de erro e Estilize de forma bonita a página de identificação;</span>
                     </div>
                     <div class="box">
                         <span>Atividade 2</span>
-                        <span>Escreva um script python que gere automaticamente um template HTML contendo um formulário para input de dados com os campos que serão recebidos por JSON (gerar o .html e o formulário, a outra parte do código recebe os dados em JSON, trata ele e devolve como uma lista de strings);</span>
+                        <span>Escreva um script python que gere automaticamente um template HTML contendo um formulário
+                            para input de dados com os campos que serão recebidos por JSON (gerar o .html e o
+                            formulário, a outra parte do código recebe os dados em JSON, trata ele e devolve como uma
+                            lista de strings);</span>
                     </div>
                     <div class="box">
                         <span>Atividade 3</span>
-                        <span>Incremente o script 4 para que após gerar o template, ele construa automaticamente uma rota que permita visualiza-lo;</span>
+                        <span>Incremente o script 4 para que após gerar o template, ele construa automaticamente uma
+                            rota que permita visualiza-lo;</span>
                     </div>
                     <div class="box">
                         <span>Atividade 4</span>
-                        <span>Crie uma classe em python que encapsule dados de usuário entre 5 e 6 campos, e desenvolva uma função de autenticação (validar dados, criar uma sessão para guardar e autenticar);                        </span>
+                        <span>Crie uma classe em python que encapsule dados de usuário entre 5 e 6 campos, e desenvolva
+                            uma função de autenticação (validar dados, criar uma sessão para guardar e autenticar);
+                        </span>
                     </div>
                 </div>
 
                 <span>Lista de Atividade 3</span>
-                <h3>criar um formulário com os campos: nome, senha autenticar e retornar uma mensagem pra ver se está funcionando e criar uma segunda rota que renderiza o formulário</h3>
+                <h3>criar um formulário com os campos: nome, senha autenticar e retornar uma mensagem pra ver se está
+                    funcionando e criar uma segunda rota que renderiza o formulário</h3>
                 <div class="box-list">
                     <div class="box">
                         <span>Atividade 1</span>
-                        <span>Fazer todas as validações possíveis para garantir que as informações foram enviadas corretamente pelo usuário;</span>
+                        <span>Fazer todas as validações possíveis para garantir que as informações foram enviadas
+                            corretamente pelo usuário;</span>
                     </div>
                     <div class="box">
                         <span>Atividade 2</span>
@@ -79,7 +108,8 @@
                     </div>
                     <div class="box">
                         <span>Atividade 3</span>
-                        <span>Garantir que o usuário seja redirecionado com a possibilidade de fazer a autenticação novamente quando um dos dados estiver incorreto</span>
+                        <span>Garantir que o usuário seja redirecionado com a possibilidade de fazer a autenticação
+                            novamente quando um dos dados estiver incorreto</span>
                     </div>
                     <div class="box">
                         <span>Atividade 4</span>
@@ -108,7 +138,7 @@
                 <div class="box-list">
                     <div class="box"></div>
                 </div>
-                
+
                 <span>Diário de Sala</span>
                 <div class="box-list">
                     <div class="box"></div>
@@ -126,4 +156,5 @@
         </main>
     </div>
 </body>
+
 </html>
