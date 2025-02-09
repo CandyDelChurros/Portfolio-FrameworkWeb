@@ -19,13 +19,23 @@ def l1e1():
 def l1e2():
     return render_template('l1e2.html')
 
-@app.route("/projetos/lista1exercicio3")
-def l1e3():
-    return render_template('l1e3.html')
+
+def generate_data():
+    data = []
+    for i in range(1, 998):
+        data.append({
+            'id': i,
+            'name': f'Nome {i}',
+            'lastname': f'Sobrenome {i}',
+            'email': f'email{i}@example.com',
+            'action': f'Ação {i}'
+        })
+    return data
 
 @app.route("/projetos/lista1exercicio3")
-def l1e4():
-    return render_template('l1e4.html')
+def l1e3():
+    data = generate_data()
+    return render_template('l1e3.html', data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)

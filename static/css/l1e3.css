@@ -1,0 +1,66 @@
+@import url(color.css);
+body {
+    font-family: 'Poppins';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body button{
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+    height: 5rem;
+    background: var(--header-color);
+    border: .2rem solid var(--font-emphasis);
+    color: var(--font-color);
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+body .table {
+    display: flex;
+    flex-direction: column;
+    border: .2rem solid var(--font-emphasis);
+}
+
+body .table .table-header, .table-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: .1rem solid var(--font-emphasis);
+    justify-content: center;
+    align-items: center;
+}
+body .table .table-header > div, .table-row > div {
+    flex: 1;
+    text-align: center;
+}
+body .table .table-header {
+    font-weight: bold;
+    background-color: var(--header-color);
+}
+body .table .table-row .action-button {
+    padding: .5rem 1rem;
+    background-color: var(--header-color);
+    color: var(--font-emphasis);
+    border: .1rem solid var(--font-emphasis);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+body .table .table-row button{
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+body .table .table-row .action-button:hover {
+    background-color: var(--font-emphasis);
+    color: var(--font-color);
+}
