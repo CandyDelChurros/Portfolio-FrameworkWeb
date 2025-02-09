@@ -1,0 +1,53 @@
+@import url(color.css);
+
+* {
+    border:0;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-color);
+    font-family:'Poppins' ;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "header" 
+    "main";
+    grid-template-rows: 5rem 1fr ;
+    background: var(--main-color);
+}
+.container header {
+    grid-area: header;
+    background: var(--header-color);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.container header .top-left{
+    height: 5rem;
+    width: 5rem;
+    background: url(img/ifms.png);
+    background-size: 3.5rem;
+    background-repeat: no-repeat;
+    margin-left: 5rem;
+}
+
+.container header .top-right{
+    margin-right: 15rem;
+}
+
+.container header .top-right span {
+    margin-left: 5rem;
+    font-weight: 800;
+}

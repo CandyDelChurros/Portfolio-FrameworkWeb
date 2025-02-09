@@ -1,0 +1,63 @@
+.container main .banner, .banner-me {
+    display: flex;
+    height: 50rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container main .banner .banner-left{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+.container main .banner .banner-left span:nth-child(1){
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--font-emphasis);
+    text-shadow: 0rem .5rem .2rem var(--shadow-text);
+    
+}
+
+.container main .banner .banner-right {
+    background: url(img/dev.webp);
+    height: 40rem;
+    width: 55rem;
+    background-size: cover;
+}
+
+.container main .banner-me .banner-left{
+    height: 40rem;
+    width: 40rem;
+    background: url(img/eu.jpg);
+    background-repeat: no-repeat;
+    border-radius: 20rem;
+    margin-right: 10rem;
+    box-shadow: .4rem 1.1rem 4.4rem 0rem var(--shadow-box);
+
+}
+
+.container main .banner-me .banner-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .banner-me .banner-right span:nth-child(1){
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--font-emphasis);
+    text-shadow: 0rem .5rem .2rem var(--shadow-text);
+}
+
+
+.container main .banner-me .banner-right .box-social {
+    display: flex;
+    gap: 2rem;
+}
+.container main .banner-me .banner-right .box-social .box{
+    width: 5rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+
+
