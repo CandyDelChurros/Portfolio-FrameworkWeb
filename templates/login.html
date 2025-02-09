@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Faça seu login</h2>
+        <form method="POST">
+            <input type="text" name="user" placeholder="Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" {% if block %}disabled{% endif %}>Entrar</button>
+        </form>
+
+        {% if msg %}
+            <p class="error">{{ msg }}</p>
+        {% endif %}
+
+        {% if block %}
+            <p class="message">Você atingiu o limite de tentativas erradas. Tente novamente mais tarde.</p>
+        {% endif %}
+    </div>
+    <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+</body>
+</html>
