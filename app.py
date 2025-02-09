@@ -165,5 +165,40 @@ def logout():
     flash('Você saiu com sucesso', 'info')
     return redirect(url_for('l2e3'))
 
+
+
+user_l3 = {
+    "snake": "solidsnake",
+    "admin": "admin"
+}
+
+@app.route("/projetos/l3")
+def l3():
+    return render_template("l3.html")
+
+@app.route("/projetos/l3/login", methods=["POST"])
+def l3_forms():
+    if "attempts" not in session:
+        session["attempts"] = 0
+    
+    if session["attempts"] >= 2:
+        return jsonify({"success": False, "message": "Limite de tentativas atingido."}), 403
+    
+    data = request.get_json()
+    
+    if not data or "username" not in data or "password" not in data:
+        return jsonify({"success": False, "message": "Dados inválidos ou ausentes."}), 400
+    
+    username = data["username"]
+    password = data["password"]
+    
+    if username in user_l3 and user_l3[username] == password:
+        session.pop("attempts", None)  
+        return jsonify({"success": True, "message": "Login bem-sucedido!"})
+    else:
+        session["attempts"] += 1
+        return jsonify({"success": False, "message": "Usuário ou senha incorretos."}), 401
+
+
 if __name__ == "__main__":
     app.run(debug=True)
