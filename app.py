@@ -3,14 +3,15 @@ from datetime import datetime
 import json
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
+from pdf import pdf_blueprint
 
 app = Flask(__name__)
+app.register_blueprint(pdf_blueprint)
 app.secret_key = "secret"
 
 @app.route("/")
 def home():
     return render_template("index.html")
-
 
 @app.route ("/projetos")
 def portfolio():
@@ -287,6 +288,7 @@ def delete(id):
     global appointments
     appointments = [appointment for appointment in appointments if appointment['id'] != id]
     return redirect(url_for('p4'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
