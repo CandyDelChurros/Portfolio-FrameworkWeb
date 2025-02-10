@@ -66,81 +66,96 @@
                 <span>Lista de Atividade 2</span>
                 <div class="box-list">
                     <a href="{{url_for('login')}}">
-                    <div class="box">
-                        <span>Atividade 1</span>
-                        <span>Considerando um usuário e uma senha mocados (dados fictícios) faça uma página de
-                            autenticação que retorne uma mensagem caso a autenticação funcione (bom dia, tarde, noite a
-                            depender do horário), se não, diz que o login não bateu, limite as tentativas de
-                            autenticação do usuário em 2x, se ele errar duas vezes, tire a opção de login e exiba uma
-                            mensagem de erro e Estilize de forma bonita a página de identificação;</span>
-                    </div>
-                </a>
-                <a href="{{url_for('forms')}}">
-                    <div class="box">
-                        <span>Atividade 2</span>
-                        <span>Escreva um script python que gere automaticamente um template HTML contendo um formulário
-                            para input de dados com os campos que serão recebidos por JSON (gerar o .html e o
-                            formulário, a outra parte do código recebe os dados em JSON, trata ele e devolve como uma
-                            lista de strings), após gerar o template, ele construa automaticamente uma
-                            rota que permita visualiza-lo  </span>
-                    </div>
-                </a>
-                <a href="{{url_for('l2e3')}}">
-                    <div class="box">
-                        <span>Atividade 3</span>
-                        <span>Crie uma classe em python que encapsule dados de usuário entre 5 e 6 campos, e desenvolva
-                            uma função de autenticação (validar dados, criar uma sessão para guardar e autenticar), ;
-                        </span>
-                    </div>
-                </a>
+                        <div class="box">
+                            <span>Atividade 1</span>
+                            <span>Considerando um usuário e uma senha mocados (dados fictícios) faça uma página de
+                                autenticação que retorne uma mensagem caso a autenticação funcione (bom dia, tarde,
+                                noite a
+                                depender do horário), se não, diz que o login não bateu, limite as tentativas de
+                                autenticação do usuário em 2x, se ele errar duas vezes, tire a opção de login e exiba
+                                uma
+                                mensagem de erro e Estilize de forma bonita a página de identificação;</span>
+                        </div>
+                    </a>
+                    <a href="{{url_for('forms')}}">
+                        <div class="box">
+                            <span>Atividade 2</span>
+                            <span>Escreva um script python que gere automaticamente um template HTML contendo um
+                                formulário
+                                para input de dados com os campos que serão recebidos por JSON (gerar o .html e o
+                                formulário, a outra parte do código recebe os dados em JSON, trata ele e devolve como
+                                uma
+                                lista de strings), após gerar o template, ele construa automaticamente uma
+                                rota que permita visualiza-lo </span>
+                        </div>
+                    </a>
+                    <a href="{{url_for('l2e3')}}">
+                        <div class="box">
+                            <span>Atividade 3</span>
+                            <span>Crie uma classe em python que encapsule dados de usuário entre 5 e 6 campos, e
+                                desenvolva
+                                uma função de autenticação (validar dados, criar uma sessão para guardar e autenticar),
+                                ;
+                            </span>
+                        </div>
+                    </a>
                 </div>
-
                 <span>Lista de Atividade 3</span>
-                <h3>criar um formulário com os campos: nome, senha autenticar e retornar uma mensagem pra ver se está
+                <h3>Criar um formulário com os campos: nome, senha autenticar e retornar uma mensagem pra ver se está
                     funcionando e criar uma segunda rota que renderiza o formulário</h3>
-                <a href="{{url_for('l3')}}"><div class="box-list">
-                    <div class="box">
-                        <span>Atividade 1</span>
-                        <span>Fazer todas as validações possíveis para garantir que as informações foram enviadas
-                            corretamente pelo usuário;</span>
-                    </div>
+                <a href="{{url_for('l3')}}">
+                    <div class="box-list">
+                        <div class="box">
+                            <span>Atividade</span>
+                            <span>Fazer todas as validações possíveis para garantir que as informações foram enviadas
+                                corretamente pelo usuário</span>
+                        </div>
                 </a>
-                </div>
-
-                <span>Simulado Prova 1</span>
-                <div class="box-list">
+            </div>
+            <span>Simulado Prova</span>
+            <div class="box-list">
+                <a href="{{url_for('p1')}}">
                     <div class="box">
                         <span>Mini Blog</span>
                     </div>
+                </a>
+                <a href="{{url_for('p2')}}">
                     <div class="box">
                         <span>Página de autenticação básica</span>
                     </div>
+                </a>
+                <a href="{{url_for('p3')}}">
                     <div class="box">
-                        <span>Página de upload de fotos</span>
+                        <span>Upload</span>
                     </div>
-                </div>
-
-                <span>Atividades</span>
-                <div class="box-list">
-                    <div class="box"></div>
-                </div>
-
-                <span>Diário de Sala</span>
-                <div class="box-list">
-                    <div class="box"></div>
-                </div>
-                <span>Prova</span>
-                <div class="box-list">
-                    <div class="box"></div>
-                </div>
-                <span>Trabalho</span>
-                <div class="box-list">
-                    <div class="box"></div>
-                </div>
-
+                </a>
             </div>
-        </main>
+
+            <span>Atividades</span>
+            <div class="box-list">
+                <div class="box"></div>
+            </div>
+
+            <span>Diário de Sala</span>
+            <div class="box-list">
+                <div class="box"></div>
+            </div>
+            <span>Prova</span>
+            
+            <div class="box-list">
+                <a href="{{url_for('p4')}}">
+                <div class="box"><span>Prova - Registro médico</span></div>
+                </a>
+            </div>
+            
+            <span>Trabalho</span>
+            <div class="box-list">
+                <a href="{{url_for('p4')}}">
+                <div class="box"><span>PDF para Word</span></div>
+            </a>
+            </div>
+    </div>
+    </main>
     </div>
 </body>
-
 </html>

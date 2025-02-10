@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Appointment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}">
+</head>
+<body>
+    <h1>Nova Consulta</h1>
+    <form action="{{ url_for('add') }}" method="POST">
+        <label for="patient">Nome do Paciente:</label>
+        <input type="text" id="patient" name="patient" required><br><br>
+        <label for="doctor">Nome do Médico:</label>
+        <input type="text" id="doctor" name="doctor" required><br><br>
+        <label for="date">Data da Consulta:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <button type="submit">Adicionar</button>
+    </form>
+    <a href="{{ url_for('p4') }}">Voltar</a>
+</body>
+</html>

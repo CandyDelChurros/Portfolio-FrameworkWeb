@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivo</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/photo.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload de Arquivo</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Escolha um arquivo para fazer upload:</label>
+                <input type="file" name="file" id="file" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+    </div>
+</body>
+</html>

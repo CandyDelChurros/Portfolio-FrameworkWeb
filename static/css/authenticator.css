@@ -1,5 +1,4 @@
 @import url(color.css);
-
 body {
     font-family: 'Poppins';
     text-align: center;
@@ -14,35 +13,31 @@ body {
     color: var(--font-color);
 }
 
-.login-container {
+.form-container {
     background-color: var(--header-color);
     border: .1rem solid var(--font-emphasis);
     border-radius: .8rem;
     box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.1);
-    width: 35rem;
+    width: 50rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-h2 {
-    color: var(--font-color)
-}
-h3 {
-    color: var(--font-emphasis);
-}
-input {
-    padding: 1rem;
-    width: 15rem;
+input[type="text"], input[type="password"] {
+    width: 35rem;
     height: 2rem;
-    margin: 1rem 0;
-    border: .1rem solid var(--shadow-box);
-    border-radius: .5rem;
-    font-size: 1.6rem;
+    border-radius: 1rem;
+    background: var(--main-color);
+    border: .1rem solid var(--font-emphasis);
+    margin-top: .5rem;
+    margin-left: .5rem;
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 1rem;
 }
-body button{
+button {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 25rem;
@@ -58,14 +53,13 @@ button:hover {
     background: var(--font-emphasis);
     color: var(--font-color);
 }
-
-.error {
-    color: var(--font-emphasis);
-    font-size: 1.4rem;
-    margin-top: 1rem;
-}
 .message {
-    margin-top: 1.5rem;
-    color: var(--font-emphasis);
-    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.success {
+    color: var(--sucess);
+}
+.error {
+    color:var(--font-emphasis);
 }

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/l2e3.css')}}">
+
 </head>
 <body>
-    <h2>Login</h2>
+    <h3>Login: snake | Senha:solidsnake</h3>
+    <h3>Login: admin | Senha:admin</h3>
+    <h2>Faça login</h2>
     <form method="POST">
         <div>
             <label for="username">Usuário</label>
@@ -28,5 +32,7 @@
             </ul>
         {% endif %}
     {% endwith %}
+    <a href="{{url_for('portfolio')}}"><button>Voltar!</button></a>
+
 </body>
 </html>

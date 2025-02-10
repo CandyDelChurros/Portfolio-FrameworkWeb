@@ -1,0 +1,90 @@
+@import url(color.css);
+
+body {
+    font-family: 'Poppins';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--font-color);
+}
+
+h1 {
+    color: var(--font-color);
+    font-size: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .1rem solid var(--font-emphasis);
+    background: var(--header-color);
+    width: 55rem;
+    height: 35rem;
+    border-radius: 5rem;
+}
+
+label {
+    color: var(--font-color);
+    font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: var(--main-color);
+    border: .1rem solid var(--font-emphasis);
+    margin-top: .5rem;
+    margin-left: .5rem;
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 1rem;
+}
+
+button[type="submit"] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 3rem;
+    background: var(--header-color);
+    border: .2rem solid var(--font-emphasis);
+    color: var(--font-color);
+    font-size: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: var(--font-emphasis);
+    color: var(--font-color);
+}
+
+ a {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 2.5rem;
+    background: var(--header-color);
+    border: .2rem solid var(--font-emphasis);
+    color: var(--font-color);
+    font-size: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+ a:hover {
+    background: var(--font-emphasis);
+    color: var(--font-color);
+}

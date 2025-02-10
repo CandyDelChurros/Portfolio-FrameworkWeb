@@ -59,13 +59,32 @@ button:hover {
     color: var(--font-color);
 }
 
-.error {
-    color: var(--font-emphasis);
-    font-size: 1.4rem;
-    margin-top: 1rem;
+body form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .1rem solid var(--font-emphasis);
+    background: var(--header-color);
+    width: 35rem;
+    height: 25rem;
+    border-radius: 5rem;
 }
-.message {
-    margin-top: 1.5rem;
-    color: var(--font-emphasis);
-    font-weight: bold;
+
+body form input{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: var(--main-color);
+    border: .1rem solid var(--font-emphasis);
+    margin-top: .5rem;
+    margin-left: .5rem;
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 1rem;
+}
+
+body form label{
+    color: var(--font-color);
+    font-size: 1.5rem;
 }

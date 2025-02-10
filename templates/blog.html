@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+</head>
+<body>
+    <h1>Mini-Blog</h1>
+    <form action="{{ url_for('add_post') }}" method="post">
+        <textarea name="content" required></textarea>
+        <button type="submit">Postar</button>
+    </form>
+    <ul>
+        {% for post in posts %}
+            <li><strong>{{ post.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</strong>: {{ post.content }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+
+</body>
+</html>

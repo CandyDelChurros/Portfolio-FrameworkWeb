@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova - Consultas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lession.css') }}">
+</head>
+<body>
+    <h1>Consultas Agendadas</h1>
+    <a href="{{ url_for('add') }}">Adicione uma Consulta</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Paciente</th>
+                <th>Médico</th>
+                <th>Data</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.patient }}</td>
+                <td>{{ appointment.doctor }}</td>
+                <td>{{ appointment.date }}</td>
+                <td><a href="{{ url_for('delete', id=appointment.id) }}">Deletar Consulta</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request, session,render_template_string, jsonify,flash, redirect, url_for
 from datetime import datetime
 import json
+import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -52,7 +53,7 @@ def login():
         user = request.form["user"]
         password = request.form["password"]
 
-        if session["try"] >= 2:
+        if session["try"] >= 12:
             return render_template("login.html", msg="Você atingiu o limite de tentativas erradas. Tente novamente mais tarde.", block=True)
 
         if user == USER and password == PASSWORD:
@@ -91,6 +92,10 @@ def template_json(json_data):
 
     template_html = f"""
     <html>
+    <head>
+    <title>Script Python</title>
+    <link rel="stylesheet" href="{{{{ url_for('static', filename='css/l2e2.css') }}}}">
+    </head>
     <body>
         <form method="POST" action="/projetos/l2e2/submit_form">
             {html_fields}
@@ -121,7 +126,7 @@ def submit_form():
 
 users_db = {
     "snake": generate_password_hash("solidsnake"),
-    "user2": generate_password_hash("mypassword"),
+    "admin": generate_password_hash("admin"),
 }
 
 class User:
@@ -155,16 +160,8 @@ def l2e3():
 @app.route('/projetos/l2e3/dashboard')
 def dashboard():
     if 'username' in session:
-        return f'Bem-vindo ao seu painel, {session["username"]}!'
+        return render_template('dashboard.html', username=session['username'])
     return redirect(url_for('l2e3'))
-
-
-@app.route('/projetos/l2e3/logout')
-def logout():
-    session.pop('username', None)
-    flash('Você saiu com sucesso', 'info')
-    return redirect(url_for('l2e3'))
-
 
 
 user_l3 = {
@@ -199,6 +196,97 @@ def l3_forms():
         session["attempts"] += 1
         return jsonify({"success": False, "message": "Usuário ou senha incorretos."}), 401
 
+posts = []
+
+@app.route('/projetos/prova1')
+def p1():
+    return render_template('blog.html', posts=sorted(posts, key=lambda x: x['timestamp'], reverse=True))
+
+@app.route('/projetos/prova1/add', methods=['POST'])
+def add_post():
+    content = request.form.get('content')
+    if content:
+        posts.append({'content': content, 'timestamp': datetime.now()})
+    return redirect(url_for('p1'))
+
+users_p2 = {
+    'admin': 'admin',
+    'snake': 'solidsnake'
+}
+
+attempts = []
+
+@app.route("/projeto/prova2", methods=["GET", "POST"])
+def p2():
+    if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+
+        if username in users_p2 and users_p2[username] == password:
+            attempts.append({'username': username, 'status': 'Success', 'date': datetime.now()})
+            return render_template('authenticator.html', message="Logado com sucesso", success=True)
+        else:
+            attempts.append({'username': username, 'status': 'Success', 'date': datetime.now()})
+            return render_template('authenticator.html', message="Dados Incorretos", success=False)
+    return render_template('authenticator.html')
+
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+@app.route('/projetos/prova3', methods=['GET', 'POST'])
+def p3():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('Nenhum arquivo enviado', 'danger')
+            return redirect(request.url)
+        
+        file = request.files['file']
+        if file.filename == '':
+            flash('Nenhum arquivo selecionado', 'warning')
+            return redirect(request.url)
+        
+        if file:
+            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+            filename = f"{timestamp}_{file.filename}"
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(filepath)
+            flash(f'Upload bem-sucedido! Arquivo salvo em: {filepath}', 'success')
+            return redirect(url_for('p3'))
+
+    return render_template('photos.html')
+
+appointments = [
+    {"id": 1, "patient": "Carlos Santos", "doctor": "Dr. Pedro", "date": "2025-01-14"},
+    {"id": 2, "patient": "Ana Paula", "doctor": "Dr. Maria", "date": "2025-01-16"}
+]
+
+@app.route('/projetos/prova')
+def p4():
+    sorted_appointments = sorted(appointments, key=lambda x: x['date'])
+    return render_template('lession.html', appointments=sorted_appointments)
+
+@app.route('/projetos/prova/add', methods=['GET', 'POST'])
+def add():
+    if request.method == 'POST':
+        patient = request.form['patient']
+        doctor = request.form['doctor']
+        date = request.form['date']
+        
+        new_id = max([appointment['id'] for appointment in appointments]) + 1 if appointments else 1
+        
+        appointments.append({"id": new_id, "patient": patient, "doctor": doctor, "date": date})
+        return redirect(url_for('p4'))
+    
+    return render_template('add.html')
+
+@app.route('/projetos/prova/delete/<int:id>')
+def delete(id):
+    global appointments
+    appointments = [appointment for appointment in appointments if appointment['id'] != id]
+    return redirect(url_for('p4'))
 
 if __name__ == "__main__":
     app.run(debug=True)
