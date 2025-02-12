@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio - Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/class.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-left">
+                <div class="logo-ifms"></div>
+            </div>
+            <div class="top-right">
+                <a href="{{url_for('home')}}"><span>HOME</span></a>
+                <a href="{{url_for('portfolio')}}"><span>PROJETOS</span></a>
+            </div>
+        </header>
+        <main>
+            <div class="banner"></div>
+            <h1>Aula 02 (16/10)</h1>
+            <div class="text">
+                <span>
+                        Nesta aula aconteceu a definição do que a gente iria fazer na aplicação prática, assim foi feita uma dinamica onde todos deram uma ideia e logo após foi feita a votação de qual ideia seria implementadas por todos
+                </span>
+                <h4>1- Sistema de Chamada por câmera</h4>
+                <h4>2- Análise de Emoções em Imagem</h4>
+                <h4>3- Scanner para documento PDF</h4>
+                <span>Por meio de impate, foi definido que cada grupo teria um tema para ser feito, separando a sala em 3 grupos</span>
+            </div>
+            <a href="{{url_for('portfolio')}}"><button>Voltar</button></a>
+
+        </main>
+    </div>
+</body>
+
+</html>

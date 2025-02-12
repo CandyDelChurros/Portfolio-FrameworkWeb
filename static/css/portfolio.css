@@ -138,12 +138,89 @@
     background: url(../img/upload.jpg);
     background-size: cover;
 } 
-.container main .box-list:nth-of-type(7) a .box{
+.container main .box-list:nth-child(5) a:nth-child(2) .box{
+    background: url(../img/appointment.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container main .box-list a:nth-child(1) .box{
+    background: url(../img/dev2.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list a .box{
+    background: url(../img/team.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list a:nth-child(3) .box{
+    background: url(../img/flask.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list a:nth-child(4) .box{
+    background: url(../img/route.webp);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list a:nth-child(5) .box{
+    background: url(../img/render.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list a:nth-child(6) .box{
+    background: url(../img/sqlite.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(7){
+    background: url(../img/dev2.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(8){
+    background: url(../img/presentation.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(9){
+    background: url(../img/dev2.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(10){
+    background: url(../img/orchestra.jpg);
+    background-position-x: -8rem;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(11){
+    background: url(../img/dev.webp);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(12){
+    background: url(../img/dev2.png);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(13){
+    background: url(../img/feedback.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container main .box-list .box:nth-child(14){
+    background: url(../img/portfolio.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container main .box-list:nth-of-type(6) a .box{
     background: url(../img/appointment.jpg);
     background-size: cover;
     background-position: center;
 } 
-.container main .box-list:nth-of-type(8) a .box{
+.container main .box-list:nth-of-type(7) a .box{
     background: url(../img/pdf.png);
     background-position: center;
     background-size: cover;

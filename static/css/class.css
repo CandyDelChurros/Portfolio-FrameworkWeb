@@ -1,0 +1,93 @@
+@import url(color.css);
+* {
+    border:0;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-color);
+    font-family:'Poppins' ;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "header" 
+    "main";
+    height: 100vh;
+    grid-template-rows: 5rem 1fr ;
+    background: var(--main-color);
+}
+.container header {
+    grid-area: header;
+    background: var(--header-color);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.container header .top-left{
+    height: 5rem;
+    width: 5rem;
+    background: url(img/ifms.png);
+    background-size: 3.5rem;
+    background-repeat: no-repeat;
+    margin-left: 5rem;
+}
+
+.container header .top-right{
+    margin-right: 15rem;
+}
+
+.container header .top-right span {
+    margin-left: 5rem;
+    font-weight: 800;
+}
+
+.container main {
+    grid-area: main;
+}
+
+.container main {
+    grid-area: main;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: var(--font-emphasis);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--font-emphasis);
+    margin: 1rem 0;
+}
+
+.text {
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.text span {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--font-color);
+    margin-bottom: 1rem;
+}
+
+body button{
+    width: 25rem;
+    height: 5rem;
+    background: var(--header-color);
+    border: .2rem solid var(--font-emphasis);
+    margin-top: 5rem;
+    color: var(--font-color);
+    font-size: 2rem;
+    border-radius: 2rem;
+}

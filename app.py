@@ -289,6 +289,29 @@ def delete(id):
     appointments = [appointment for appointment in appointments if appointment['id'] != id]
     return redirect(url_for('p4'))
 
+@app.route('/projetos/aula/1')
+def class1():
+    return render_template('class1.html')
+
+@app.route('/projetos/aula/2')
+def class2():
+    return render_template('class2.html')
+
+@app.route('/projetos/aula/3')
+def class3():
+    return render_template('class3.html')
+
+@app.route('/projetos/aula/4')
+def class4():
+    return render_template('class4.html')
+
+@app.route('/projetos/aula/5')
+def class5():
+    return render_template('class5.html')
+
+@app.route('/projetos/aula/6')
+def class6():
+    return render_template('class6.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
