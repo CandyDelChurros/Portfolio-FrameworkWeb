@@ -18,7 +18,7 @@ import cv2
 
 pdf_blueprint = Blueprint('pdf', __name__,url_prefix='/pdf')
 
-genai.configure(api_key="AIzaSyDYjNNlTFG8_8ceCD5DDSu0IdgF4MlynPk")
+genai.configure(api_key="INSERIR_KEY")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__, static_folder="static")
